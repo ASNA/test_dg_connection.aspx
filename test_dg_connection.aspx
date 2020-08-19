@@ -15,7 +15,7 @@
      | Specify any overrides in the Overrides subroutine. 
      */
 
-    DclDB pgmDB DBName("*PUBLIC/DG Net Local")
+    DclDB pgmDB DBName("*PUBLIC/Cypress")
 
     DclDiskFile  InputFile +
           Type( *Input  ) +
@@ -102,6 +102,8 @@
             Response.Write('<br>')
             PingServer()
             CheckPort()
+        Finally 
+            Disconnect pgmDB 
         EndTry 
     EndSr 
 
