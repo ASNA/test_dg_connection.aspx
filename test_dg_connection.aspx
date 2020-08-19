@@ -103,7 +103,9 @@
             PingServer()
             CheckPort()
         Finally 
-            // Ihe job got connected, end it. 
+            // Ihe job got connected, end it.
+            // It will go away anyway after the Session Time-Out 
+            // value expires, but get rid of it quickly this way.
             Disconnect pgmDB 
         EndTry 
     EndSr 
