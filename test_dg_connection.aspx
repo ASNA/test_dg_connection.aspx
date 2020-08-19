@@ -103,10 +103,12 @@
             PingServer()
             CheckPort()
         Finally 
-            // Ihe job got connected, end it.
-            // It will go away anyway after the Session Time-Out 
-            // value expires, but get rid of it quickly this way.
-            Disconnect pgmDB 
+            If pgmDB.IsOpen
+                // If the job connected, end it.
+                // It will go away anyway after the Session Time-Out 
+                // value expires, but get rid of it quickly this way.
+                Disconnect pgmDB 
+            EndIf 
         EndTry 
     EndSr 
 
