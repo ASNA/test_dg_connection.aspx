@@ -103,6 +103,7 @@
             PingServer()
             CheckPort()
         Finally 
+            // Ihe job got connected, end it. 
             Disconnect pgmDB 
         EndTry 
     EndSr 
