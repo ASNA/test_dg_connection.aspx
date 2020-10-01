@@ -68,7 +68,7 @@
         EndIf 
 
         If Request['password'] AND NOT String.IsNullOrEmpty(Request['password'].ToString()) 
-            FilePath = Request['password'].ToString()
+            Password = Request['password'].ToString()
             pgmDB.Password = Password
         EndIf 
        
